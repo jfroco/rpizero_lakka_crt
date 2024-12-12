@@ -6,7 +6,7 @@ Getting Switchres Working with Lakka on Raspberry Pi Zero 2 W (HDMI)
 Use the Raspberry Pi 3 (aarch64) image
 Download the nightly version from: https://nightly.builds.lakka.tv/latest/RPi3.aarch64/
 
-(I used the Lakka-RPi3.aarch64-5.x-20240723-e2c1b74.img.gz image)
+(I used the [Lakka-RPi3.aarch64-5.x-20240723-e2c1b74.img.gz](https://nightly.builds.lakka.tv/latest/RPi3.aarch64/Lakka-RPi3.aarch64-5.x-20240723-e2c1b74.img.gz) image)
 
 Install the image, and boot your Raspberry Pi.
 
@@ -25,10 +25,10 @@ Restart RetroArch to test the RGUI menu:
 
 ## 2.- Copy EDID file
 
-Access  \\\\LAKKA network share
-Goto to Configfiles
-Create a folder with the name "firmware"
-Copy "480i_zero.bin" to the "firmware" folder.
+- Access  \\\\LAKKA network share
+- Goto to Configfiles
+- Create a folder with the name "firmware"
+- Copy [480i_zero.bin](https://github.com/jfroco/rpizero_lakka_crt/blob/main/480i_zero.bin) to the "firmware" folder.
 
 This file is the EDID to get 480i after booting. It is optional, but it will help to keep everything at 15KHz when switching resolutions.
 
@@ -99,7 +99,7 @@ dtparam=audio=on
 ```
 
 
-cmdline.txt: The UUID are going to be different, don't worry, just add the "drm.edid_firmware=480i_zero.bin" at the end of the line.
+cmdline.txt: The UUIDs are going to be different, don't worry, just add the "drm.edid_firmware=480i_zero.bin" at the end of the line.
 This will boot 480i with audio support through the HDMI port.
 ```
 boot=UUID=2307-5426 disk=UUID=7e4b2ed5-e279-40c1-8c5e-3eb0fb91b30d quiet console=tty0 drm.edid_firmware=480i_zero.bin
@@ -116,14 +116,14 @@ Use appropriate transcoder (no upscalers) for:
 
 Boot. You are going to get Lakka running at 480i.
 
-## 5.- Configure CRT Switchres
-
 If RetroArch don't start, check this in RetroArch configuration \\\\LAKKA\Configfiles\retroarch\retroarch.cfg
 ```
 video_fullscreen = "true"
 video_fullscreen_x = "0"
 video_fullscreen_y = "0"
 ```
+
+## 5.- Configure CRT Switchres
 
 Now configure CRT Switchres (using RetroArch menu in this order)
 
