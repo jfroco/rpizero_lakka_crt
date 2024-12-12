@@ -25,7 +25,7 @@ Restart RetroArch to test the RGUI menu:
 
 ## 2.- Copy EDID file
 
-Access  \\LAKKA network share
+Access  \\\\LAKKA network share
 Goto to Configfiles
 Create a folder with the name "firmware"
 Copy "480i_zero.bin" to the "firmware" folder.
@@ -118,7 +118,7 @@ Boot. You are going to get Lakka running at 480i.
 
 ## 5.- Configure CRT Switchres
 
-If RetroArch don't start, check this in RetroArch configuration \\LAKKA\Configfiles\retroarch\retroarch.cfg
+If RetroArch don't start, check this in RetroArch configuration \\\\LAKKA\Configfiles\retroarch\retroarch.cfg
 ```
 video_fullscreen = "true"
 video_fullscreen_x = "0"
