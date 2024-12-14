@@ -38,6 +38,7 @@ This file is the EDID to get 480i after booting. It is optional, but it will hel
 First, you need to access the console, to do that:
 
 - Settings -> Services -> SSH: Enabled
+- Main Menu -> Configuration File -> Save Current Configuration
 
 Then from your PC, access the RPI via SSH:
 
