@@ -35,6 +35,30 @@ This file is the EDID to get 480i after booting. It is optional, but it will hel
 
 ## 3.- Edit RPI configuration file
 
+First, you need to access the console, to do that:
+
+- Settings -> Services -> SSH: Enabled
+
+Then from your PC, access the RPI via SSH:
+
+```
+ssh root@lakka
+```
+Answer 'yes' to save the fingerprint.
+The password is: root
+
+Now, to edit the following files, /flash must be mounted as read and write:
+
+```
+mount -o remount,rw /flash
+```
+
+To edit the files use 'nano' or 'vi'. Ex:
+
+```
+nano /flash/config.txt
+```
+
 /flash/config.txt: Just comment the HDMI lines.
 ```
 # SPDX-License-Identifier: GPL-2.0-or-later
@@ -125,6 +149,8 @@ video_fullscreen_y = "0"
 
 ## 5.- Configure CRT Switchres
 
+### Option 1
+
 Now configure CRT Switchres (using RetroArch menu in this order)
 
 - Settings -> Video -> CRT Switchres -> CRT Super Resolution = 1920
@@ -134,7 +160,16 @@ Now configure CRT Switchres (using RetroArch menu in this order)
 
 1920 is the only value that seems to work. 2560 doesn't work.
 
+### Option 2
 You can do the same editing: \\LAKKA\Configfiles\retroarch\retroarch.cfg
+
+First you need to stop the RetroArch service via SSH:
+
+```
+systemctl stop retroarch
+```
+
+This is the content of the file regarding crt_switch:
 ```
 crt_switch_center_adjust = "0"
 crt_switch_hires_menu = "false"
@@ -145,6 +180,13 @@ crt_switch_resolution_use_custom_refresh_rate = "false"
 crt_switch_timings = ""
 crt_video_refresh_rate = "60.000000"
 ```
+
+Remebember to start the service again:
+```
+systemctl start retroarch
+```
+
+
 
 ## 6.- Have fun!!!
 
