@@ -162,7 +162,7 @@ Now configure CRT Switchres (using RetroArch menu in this order)
 1920 is the only value that seems to work. 2560 doesn't work.
 
 ### Option 2
-You can do the same editing: \\LAKKA\Configfiles\retroarch\retroarch.cfg
+You can do the same editing: \\\\LAKKA\Configfiles\retroarch\retroarch.cfg
 
 First you need to stop the RetroArch service via SSH:
 
