@@ -133,11 +133,15 @@ boot=UUID=2307-5426 disk=UUID=7e4b2ed5-e279-40c1-8c5e-3eb0fb91b30d quiet console
 
 ## 4.- Connect the Pi Zero 2 W to your TV.
 
-Connect Pi Zero 2 W via HDMI
-Use appropriate transcoder (no upscalers) for:
+Use a HDMI to Component transcoder (no scaler), or...
+
+Use a HDMI to VGA transcoder and then use an appropriate transcoder (no upscalers) for:
 - VGA to SCART
 - VGA to Component
 - VGA to S-video/composite
+
+
+
 
 Boot. You are going to get Lakka running at 480i.
 
